@@ -48,7 +48,7 @@ The application stores data in memory using `ArrayList` and provides a menu-driv
 src
 └── com.airtribe.learntrack
     ├── entity
-    ├── service
+    ├── com.airtribe.learntrack.service
     ├── exception
     ├── util
     └── ui
@@ -59,7 +59,7 @@ src
 | Package | Purpose |
 |----------|---------|
 | entity | Contains Student, Course, Enrollment and Person classes |
-| service | Business logic for managing students, courses and enrollments |
+| com.airtribe.learntrack.service | Business logic for managing students, courses and enrollments |
 | util | Utility classes like IdGenerator and InputValidator |
 | exception | Custom exceptions |
 | ui | Console menu and Main class |
@@ -118,10 +118,22 @@ git clone <repository-url>
 ## Class Diagram
 
 Person
-   ▲
-   │ extends
-   │
-Student
+------
+id
+firstName
+lastName
+email
+
+        ▲
+        │
+ -----------------
+│               │
+Student      Trainer
+--------------
+batch         specialization
+active        experienceInYears
+department
+active
 
 StudentService ─────────► Student
 
@@ -224,7 +236,6 @@ IDGenerator
 | + getNextStudentId() |
 | + getNextCourseId()  |
 +----------------------+
-
 ---
 
 ## Future Improvements
