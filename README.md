@@ -253,5 +253,4 @@ Some features that can be enhanced later:
 ---
 
 ## Author
-
 **Sukriti Kalyani**
